@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    image: node:16
+    command: yarn dev
+    env_file: .env
+    working_dir: /app
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/app
